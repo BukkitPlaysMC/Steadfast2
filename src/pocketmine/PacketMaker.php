@@ -68,7 +68,7 @@ class PacketMaker extends Worker {
 			$start = microtime(true);
 			$this->tick();
 			$time = microtime(true) - $start;
-			if ($time < 0.024) {
+			if ($time < 0.02) {
 				time_sleep_until(microtime(true) + 0.025 - $time);
 			}
 		}
